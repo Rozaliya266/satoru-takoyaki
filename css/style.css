@@ -1,0 +1,117 @@
+:root {
+	--primary: rgb(191, 41, 50);
+	--secondary: rgb(114, 24, 29);
+	--shades: rgba(238, 238, 238, 1.0);
+	--background: rgb(255, 255, 235)
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Source Code Pro', monospace;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.header {
+	height: 100vh;
+}
+
+.about,
+.menu,
+.gallery,
+.testimonial,
+.contact {
+  height: auto;
+}
+
+.header,
+.about,
+.menu,
+.gallery,
+.testimonial,
+.contact,
+.footer {
+	position: relative;
+}
+
+.header h1 {
+	color: var(--shades);
+	font-size: clamp(2rem, 8vw, 6rem);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.footer h3 {
+	margin: 0;
+}
+
+.header h1::before,
+.about h1::before,
+.menu h1::before,
+.gallery h1::before,
+.testimonial h1::before,
+.contact h1::before,
+.footer h3::before {
+	content: '';
+}
+
+.header {
+	background-color: var(--primary);
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 90px;
+}
+
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    h1, h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .about-container,
+    .testimonial-container,
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
